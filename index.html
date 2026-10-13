@@ -131,6 +131,7 @@
             appearance: none; -webkit-appearance: none; transition: border-color 0.2s;
         }
         .field select { background-image: linear-gradient(45deg, transparent 50%, var(--dourado) 50%), linear-gradient(135deg, var(--dourado) 50%, transparent 50%); background-position: calc(100% - 20px) 50%, calc(100% - 15px) 50%; background-size: 5px 5px; background-repeat: no-repeat; padding-right: 40px; }
+        .field select:disabled { color: #aaa; cursor: not-allowed; }
         .field input:focus, .field select:focus { outline: none; border-color: var(--dourado); }
         .cal { background: var(--claro); border: 1px solid #e6d8cd; border-radius: 2px; padding: 14px; }
         .cal-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
@@ -244,7 +245,7 @@
 <!-- HERO -->
 <div class="hero" id="inicio">
     <h1 data-pt="Massagem Tailandesa Tradicional" data-en="Traditional Thai Massage">Massagem Tailandesa Tradicional</h1>
-    <p data-pt="Certificado Internacional • Chiang Mai, Tailândia" data-en="International Certified • Chiang Mai, Thailand">Certificado Internacional • Chiang Mai, Tailândia</p>
+    <p data-pt="Chiang Mai, Tailândia" data-en="Chiang Mai, Thailand">Chiang Mai, Tailândia</p>
     <a href="#servicos" class="hero-btn" data-pt="Ver Serviços" data-en="View Services">Ver Serviços</a>
 </div>
 
@@ -255,11 +256,10 @@
         <hr>
     </div>
     <div class="about-wrap">
-        <img src="foto-certificado.jpg" alt="ITM Certificate" class="about-img">
+        <img src="foto-certificado.jpg" alt="ITM School of Thai Massage" class="about-img">
         <div class="about-text">
-            <h3 data-pt="Treinado na ITM School of Thai Massage" data-en="Trained at ITM School of Thai Massage">Treinado na ITM School of Thai Massage</h3>
-            <p data-pt="Formado em Chiang Mai, na Tailândia. Prática tradicional ensinada por mestres experientes." data-en="Graduated in Chiang Mai, Thailand. Traditional practice taught by experienced masters.">Formado em Chiang Mai, na Tailândia. Prática tradicional ensinada por mestres experientes.</p>
-            <span class="cert-tag">✓ ITM International Certificate</span>
+            <h3 data-pt="Praticante do método da ITM School of Thai Massage" data-en="Practitioner of the ITM School of Thai Massage method">Praticante do método da ITM School of Thai Massage</h3>
+            <p data-pt="Prática tradicional ensinada por professores experientes da escola ITM, em Chiang Mai, Tailândia." data-en="Traditional practice taught by experienced teachers at the ITM school in Chiang Mai, Thailand.">Prática tradicional ensinada por professores experientes da escola ITM, em Chiang Mai, Tailândia.</p>
         </div>
     </div>
 </section>
@@ -369,9 +369,9 @@
         </div>
         <img src="foto-yoga.jpg" alt="Shivam Yoga" class="yoga-img">
         <ul class="benefits">
-            <li><strong data-pt="Fortalece a musculatura" data-en="Strengthens the muscles">Fortalece a musculatura</strong><span data-pt=" com posições que trabalham o corpo de forma consciente." data-en=" with positions that work the body mindfully."> com posições que trabalham o corpo de forma consciente.</span></li>
-            <li><strong data-pt="Desperta flexibilidade nas articulações" data-en="Awakens flexibility in the joints">Desperta flexibilidade nas articulações</strong><span data-pt=", devolvendo amplitude aos movimentos." data-en=", restoring range of movement.">, devolvendo amplitude aos movimentos.</span></li>
-            <li><strong data-pt="Desperta força física" data-en="Awakens physical strength">Desperta força física</strong><span data-pt=", unindo respiração, movimento e concentração." data-en=", uniting breath, movement and focus.">, unindo respiração, movimento e concentração.</span></li>
+            <li><strong data-pt="Fortalece a musculatura." data-en="Strengthens the muscles.">Fortalece a musculatura.</strong></li>
+            <li><strong data-pt="Desperta flexibilidade nas articulações." data-en="Awakens flexibility in the joints.">Desperta flexibilidade nas articulações.</strong></li>
+            <li><strong data-pt="Desperta força física." data-en="Awakens physical strength.">Desperta força física.</strong></li>
         </ul>
         <a href="https://wa.me/66819050677" class="wa-link btn-yoga" target="_blank" data-msg-pt="Olá! Gostaria de informações sobre as aulas de Shivam Yoga." data-msg-en="Hello! I would like information about Shivam Yoga classes." data-pt="Solicitar Informações" data-en="Enquire Now">Solicitar Informações</a>
     </div>
@@ -411,34 +411,11 @@
         </div>
         <div class="field">
             <label for="bk-time" data-pt="Horário" data-en="Time">Horário</label>
-                <select id="bk-time">
-                    <option value="" data-pt="Selecione…" data-en="Select…">Selecione…</option>
-                    <option value="12:00">12:00</option>
-                    <option value="12:30">12:30</option>
-                    <option value="13:00">13:00</option>
-                    <option value="13:30">13:30</option>
-                    <option value="14:00">14:00</option>
-                    <option value="14:30">14:30</option>
-                    <option value="15:00">15:00</option>
-                    <option value="15:30">15:30</option>
-                    <option value="16:00">16:00</option>
-                    <option value="16:30">16:30</option>
-                    <option value="17:00">17:00</option>
-                    <option value="17:30">17:30</option>
-                    <option value="18:00">18:00</option>
-                    <option value="18:30">18:30</option>
-                    <option value="19:00">19:00</option>
-                    <option value="19:30">19:30</option>
-                    <option value="20:00">20:00</option>
-                    <option value="20:30">20:30</option>
-                    <option value="21:00">21:00</option>
-                    <option value="21:30">21:30</option>
-                    <option value="22:00">22:00</option>
-                    <option value="22:30">22:30</option>
-                    <option value="23:00">23:00</option>
+                <select id="bk-time" disabled>
+                    <option value="" data-pt="Escolha a data primeiro" data-en="Choose a date first">Escolha a data primeiro</option>
                 </select>
         </div>
-        <p class="field-hint" style="margin:-10px 0 22px" data-pt="Atendimento às sextas e sábados, das 12:00 às 23:30." data-en="Open Fridays and Saturdays, 12:00 to 23:30.">Atendimento às sextas e sábados, das 12:00 às 23:30.</p>
+        <p class="field-hint" style="margin:-10px 0 22px" data-pt="Sexta: 12:00 às 21:00 · Sábado: 10:00 às 19:00 (último agendamento)." data-en="Friday: 12:00 to 21:00 · Saturday: 10:00 to 19:00 (last booking).">Sexta: 12:00 às 21:00 · Sábado: 10:00 às 19:00 (último agendamento).</p>
         <div class="field">
             <label for="bk-name" data-pt="Seu nome" data-en="Your name">Seu nome</label>
             <input type="text" id="bk-name" autocomplete="name" data-ph-pt="Como podemos te chamar?" data-ph-en="What should we call you?" placeholder="Como podemos te chamar?">
@@ -471,7 +448,7 @@
     </div>
     <div class="contact-info">
         <p>📱 WhatsApp: <a href="https://wa.me/66819050677" class="wa-link" target="_blank" data-msg-pt="Olá! Gostaria de agendar uma massagem." data-msg-en="Hello! I would like to book a massage.">+66 81-905-0677</a></p>
-        <p data-pt="🕐 Atendimento: Sextas e Sábados — 12:00 às 23:30" data-en="🕐 Business Hours: Friday & Saturday — 12:00 to 23:30">🕐 Atendimento: Sextas e Sábados — 12:00 às 23:30</p>
+        <p data-pt="🕐 Sexta: 12:00 às 21:00 · Sábado: 10:00 às 19:00" data-en="🕐 Friday: 12:00 to 21:00 · Saturday: 10:00 to 19:00">🕐 Sexta: 12:00 às 21:00 · Sábado: 10:00 às 19:00</p>
     </div>
 </section>
 
@@ -502,6 +479,7 @@ function switchLang(lang) {
     document.querySelectorAll('optgroup[data-label-pt]').forEach(el => { el.label = el.getAttribute('data-label-' + lang); });
     document.getElementById('bk-error').textContent = '';
     renderCal();
+    fillTimes();
     setWaLinks(lang);
 }
 function setWaLinks(lang) {
@@ -515,11 +493,11 @@ function toggleMenu() { document.getElementById('mainnav').classList.toggle('ope
 function closeMenu() { document.getElementById('mainnav').classList.remove('open'); }
 const T = {
     pt: { noService: 'Escolha um serviço.', noDate: 'Escolha uma data.', past: 'Escolha uma data a partir de hoje.',
-          wrongDay: 'Escolha uma das datas disponíveis.', noTime: 'Escolha um horário.', noName: 'Informe seu nome.',
+          wrongDay: 'Escolha uma das datas disponíveis.', noTime: 'Escolha um horário.', noName: 'Informe seu nome.', pickDateFirst: 'Escolha a data primeiro', selectTime: 'Selecione…',
           days: ['domingo','segunda','terça','quarta','quinta','sexta','sábado'],
           msg: (n, sv, d, t) => `Olá! Meu nome é ${n}.\nGostaria de agendar: ${sv}\nData: ${d}\nHorário: ${t}` },
     en: { noService: 'Please choose a service.', noDate: 'Please choose a date.', past: 'Please choose a date from today on.',
-          wrongDay: 'Please choose one of the available dates.', noTime: 'Please choose a time.', noName: 'Please enter your name.',
+          wrongDay: 'Please choose one of the available dates.', noTime: 'Please choose a time.', noName: 'Please enter your name.', pickDateFirst: 'Choose a date first', selectTime: 'Select…',
           days: ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],
           msg: (n, sv, d, t) => `Hello! My name is ${n}.\nI would like to book: ${sv}\nDate: ${d}\nTime: ${t}` }
 };
@@ -530,6 +508,7 @@ const CAL = {
           wd: ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'], prev: 'Previous month', next: 'Next month' }
 };
 const OPEN_DAYS = [5, 6]; // sexta e sábado
+const HOURS = { 5: ['12:00', '21:00'], 6: ['10:00', '19:00'] }; // sexta / sábado: primeiro e último horário
 const OPEN_COUNT = 4; // próximas duas sextas e dois sábados
 const todayD = new Date(); todayD.setHours(0, 0, 0, 0);
 const pad2 = x => String(x).padStart(2, '0');
@@ -568,7 +547,19 @@ function renderCal() {
     box.innerHTML = h;
 }
 function moveCal(n) { calM += n; if (calM < 0) { calM = 11; calY--; } if (calM > 11) { calM = 0; calY++; } renderCal(); }
-function pickDay(iso) { calSel = iso; document.getElementById('bk-date').value = iso; document.getElementById('bk-error').textContent = ''; renderCal(); }
+function fillTimes() {
+    const sel = document.getElementById('bk-time'), prev = sel.value;
+    if (!calSel) { sel.disabled = true; sel.innerHTML = `<option value="">${T[currentLang].pickDateFirst}</option>`; return; }
+    const [y, m, d] = calSel.split('-').map(Number), [a, b] = HOURS[new Date(y, m - 1, d).getDay()];
+    const toMin = t => +t.split(':')[0] * 60 + +t.split(':')[1];
+    let h = `<option value="">${T[currentLang].selectTime}</option>`;
+    for (let t = toMin(a); t <= toMin(b); t += 30) {
+        const v = `${pad2(Math.floor(t / 60))}:${pad2(t % 60)}`;
+        h += `<option value="${v}"${v === prev ? ' selected' : ''}>${v}</option>`;
+    }
+    sel.innerHTML = h; sel.disabled = false;
+}
+function pickDay(iso) { calSel = iso; document.getElementById('bk-date').value = iso; document.getElementById('bk-error').textContent = ''; renderCal(); fillTimes(); }
 renderCal();
 function sendBooking(e) {
     e.preventDefault();
