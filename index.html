@@ -117,6 +117,9 @@
         .yoga-block { background: var(--bege); padding: 100px 25px; text-align: center; }
         .yoga-block .benefits li { border-bottom-color: #e6d8cd; }
         .yoga-inner { max-width: 920px; margin: 0 auto; }
+        .sextou { display: inline-flex; flex-direction: column; align-items: center; gap: 4px; background: #fff; border: 1px solid var(--dourado); border-radius: 4px; padding: 16px 30px; margin-top: -20px; }
+        .sextou-title { font-family: var(--serif); font-size: 1.8rem; font-weight: 600; color: var(--dourado); line-height: 1.1; }
+        .sextou span:last-child { font-size: 0.85rem; color: var(--marrom); letter-spacing: 0.5px; }
         .yoga-img { max-width: 480px; width: 100%; margin: 34px auto; display: block; border-radius: 3px; }
         .btn-yoga { display: inline-block; background: var(--dourado); color: #fff; padding: 14px 36px; font-size: 0.78rem; letter-spacing: 1.5px; text-transform: uppercase; border-radius: 2px; transition: background 0.3s; }
         .btn-yoga:hover { background: var(--dourado-esc); }
@@ -301,7 +304,6 @@
                 </tr>
             </tbody>
         </table>
-        <p class="note" data-pt="* Após 22h30: acréscimo de R$ 23 (฿170)" data-en="* After 22:30: +R$ 23 (฿170)">* Após 22h30: acréscimo de R$ 23 (฿170)</p>
     </div>
 
     <!-- FOOT REFLEXOLOGY -->
@@ -367,6 +369,7 @@
             <hr>
             <p class="section-sub" data-pt="Yoga Tradicional Indiano — Desbloqueio e Autopercepção" data-en="Traditional Indian Yoga — Unlocking & Self-Awareness">Yoga Tradicional Indiano — Desbloqueio e Autopercepção</p>
         </div>
+        <div class="sextou"><span class="sextou-title" data-pt="Sextou!" data-en="Happy Friday!">Sextou!</span><span data-pt="Shivam Yoga Sadhana · toda sexta às 19:00" data-en="Shivam Yoga Sadhana · every Friday at 7 pm">Shivam Yoga Sadhana · toda sexta às 19:00</span></div>
         <img src="foto-yoga.jpg" alt="Shivam Yoga" class="yoga-img">
         <ul class="benefits">
             <li><strong data-pt="Fortalece a musculatura." data-en="Strengthens the muscles.">Fortalece a musculatura.</strong></li>
@@ -400,7 +403,7 @@
                     <option value="cc100" data-pt="Massagem com Óleo de Coco — 100 min (R$ 301)" data-en="Coconut Oil Massage — 100 min (R$ 301)">Massagem com Óleo de Coco — 100 min (R$ 301)</option>
                 </optgroup>
                 <optgroup label="Shivam Yoga" data-label-pt="Shivam Yoga" data-label-en="Shivam Yoga">
-                    <option value="yoga" data-pt="Aula de Shivam Yoga" data-en="Shivam Yoga class">Aula de Shivam Yoga</option>
+                    <option value="yoga" data-pt="Shivam Yoga Sadhana — sexta, 19:00" data-en="Shivam Yoga Sadhana — Friday, 7 pm">Shivam Yoga Sadhana — sexta, 19:00</option>
                 </optgroup>
             </select>
         </div>
@@ -415,7 +418,7 @@
                     <option value="" data-pt="Escolha a data primeiro" data-en="Choose a date first">Escolha a data primeiro</option>
                 </select>
         </div>
-        <p class="field-hint" style="margin:-10px 0 22px" data-pt="Sexta: 12:00 às 21:00 · Sábado: 10:00 às 19:00 (último agendamento)." data-en="Friday: 12:00 to 21:00 · Saturday: 10:00 to 19:00 (last booking).">Sexta: 12:00 às 21:00 · Sábado: 10:00 às 19:00 (último agendamento).</p>
+        <p class="field-hint" style="margin:-10px 0 22px" data-pt="Massagens: sábado, às 10:00 ou às 16:00 · Shivam Yoga Sadhana: sexta, às 19:00." data-en="Massages: Saturday, 10 am or 4 pm · Shivam Yoga Sadhana: Friday, 7 pm.">Massagens: sábado, às 10:00 ou às 16:00 · Shivam Yoga Sadhana: sexta, às 19:00.</p>
         <div class="field">
             <label for="bk-name" data-pt="Seu nome" data-en="Your name">Seu nome</label>
             <input type="text" id="bk-name" autocomplete="name" data-ph-pt="Como podemos te chamar?" data-ph-en="What should we call you?" placeholder="Como podemos te chamar?">
@@ -448,7 +451,8 @@
     </div>
     <div class="contact-info">
         <p>📱 WhatsApp: <a href="https://wa.me/66819050677" class="wa-link" target="_blank" data-msg-pt="Olá! Gostaria de agendar uma massagem." data-msg-en="Hello! I would like to book a massage.">+66 81-905-0677</a></p>
-        <p data-pt="🕐 Sexta: 12:00 às 21:00 · Sábado: 10:00 às 19:00" data-en="🕐 Friday: 12:00 to 21:00 · Saturday: 10:00 to 19:00">🕐 Sexta: 12:00 às 21:00 · Sábado: 10:00 às 19:00</p>
+        <p data-pt="💆 Massagens: sábado, às 10:00 ou às 16:00" data-en="💆 Massages: Saturday, 10 am or 4 pm">💆 Massagens: sábado, às 10:00 ou às 16:00</p>
+        <p data-pt="🧘 Shivam Yoga Sadhana: sexta, 19:00 — Sextou!" data-en="🧘 Shivam Yoga Sadhana: Friday, 7 pm — Happy Friday!">🧘 Shivam Yoga Sadhana: sexta, 19:00 — Sextou!</p>
     </div>
 </section>
 
@@ -461,7 +465,7 @@
 <!-- FOOTER -->
 <footer>
     <p class="footer-title" data-pt="Massagem Tailandesa & Shivam Yoga" data-en="Thai Massage & Shivam Yoga">Massagem Tailandesa & Shivam Yoga</p>
-    <p data-pt="Formado na ITM — Chiang Mai, Tailândia" data-en="Trained at ITM — Chiang Mai, Thailand">Formado na ITM — Chiang Mai, Tailândia</p>
+    <p data-pt="Método ITM — Chiang Mai, Tailândia" data-en="ITM Method — Chiang Mai, Thailand">Método ITM — Chiang Mai, Tailândia</p>
     <p>© 2026</p>
 </footer>
 
@@ -493,11 +497,11 @@ function toggleMenu() { document.getElementById('mainnav').classList.toggle('ope
 function closeMenu() { document.getElementById('mainnav').classList.remove('open'); }
 const T = {
     pt: { noService: 'Escolha um serviço.', noDate: 'Escolha uma data.', past: 'Escolha uma data a partir de hoje.',
-          wrongDay: 'Escolha uma das datas disponíveis.', noTime: 'Escolha um horário.', noName: 'Informe seu nome.', pickDateFirst: 'Escolha a data primeiro', selectTime: 'Selecione…',
+          wrongDay: 'Escolha uma das datas disponíveis.', noTime: 'Escolha um horário.', noName: 'Informe seu nome.', pickServiceFirst: 'Escolha o serviço para ver as datas.', pickDateFirst: 'Escolha a data primeiro', selectTime: 'Selecione…',
           days: ['domingo','segunda','terça','quarta','quinta','sexta','sábado'],
           msg: (n, sv, d, t) => `Olá! Meu nome é ${n}.\nGostaria de agendar: ${sv}\nData: ${d}\nHorário: ${t}` },
     en: { noService: 'Please choose a service.', noDate: 'Please choose a date.', past: 'Please choose a date from today on.',
-          wrongDay: 'Please choose one of the available dates.', noTime: 'Please choose a time.', noName: 'Please enter your name.', pickDateFirst: 'Choose a date first', selectTime: 'Select…',
+          wrongDay: 'Please choose one of the available dates.', noTime: 'Please choose a time.', noName: 'Please enter your name.', pickServiceFirst: 'Choose a service to see the dates.', pickDateFirst: 'Choose a date first', selectTime: 'Select…',
           days: ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],
           msg: (n, sv, d, t) => `Hello! My name is ${n}.\nI would like to book: ${sv}\nDate: ${d}\nTime: ${t}` }
 };
@@ -507,30 +511,34 @@ const CAL = {
     en: { months: ['January','February','March','April','May','June','July','August','September','October','November','December'],
           wd: ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'], prev: 'Previous month', next: 'Next month' }
 };
-const OPEN_DAYS = [5, 6]; // sexta e sábado
-const HOURS = { 5: ['12:00', '21:00'], 6: ['10:00', '19:00'] }; // sexta / sábado: primeiro e último horário
-const OPEN_COUNT = 4; // próximas duas sextas e dois sábados
+// massagem: sábado às 10:00 ou 16:00 · yoga: sexta às 19:00
+const SCHED = { massage: { day: 6, times: ['10:00', '16:00'] }, yoga: { day: 5, times: ['19:00'] } };
+const OPEN_COUNT = 2; // próximas duas datas de cada serviço
 const todayD = new Date(); todayD.setHours(0, 0, 0, 0);
 const pad2 = x => String(x).padStart(2, '0');
 const isoOf = dt => `${dt.getFullYear()}-${pad2(dt.getMonth() + 1)}-${pad2(dt.getDate())}`;
-const ALLOWED = (() => {
+const kindOf = () => { const v = document.getElementById('bk-service').value; return !v ? null : v === 'yoga' ? 'yoga' : 'massage'; };
+function allowedFor(kind) {
+    if (!kind) return [];
     const list = [], d = new Date(todayD);
-    while (list.length < OPEN_COUNT) { if (OPEN_DAYS.includes(d.getDay())) list.push(isoOf(d)); d.setDate(d.getDate() + 1); }
+    while (list.length < OPEN_COUNT) { if (d.getDay() === SCHED[kind].day) list.push(isoOf(d)); d.setDate(d.getDate() + 1); }
     return list;
-})();
-const lastAllowed = ALLOWED[ALLOWED.length - 1].split('-').map(Number);
-const MAX_MONTHS_AHEAD = (lastAllowed[0] - todayD.getFullYear()) * 12 + (lastAllowed[1] - 1) - todayD.getMonth();
+}
+let ALLOWED = [];
 let calY = todayD.getFullYear(), calM = todayD.getMonth(), calSel = null;
 function renderCal() {
     const c = CAL[currentLang], box = document.getElementById('bk-cal');
     const first = new Date(calY, calM, 1), days = new Date(calY, calM + 1, 0).getDate();
     const monthsFromNow = (calY - todayD.getFullYear()) * 12 + calM - todayD.getMonth();
+    const last = ALLOWED.length ? ALLOWED[ALLOWED.length - 1].split('-').map(Number) : null;
+    const MAX_MONTHS_AHEAD = last ? (last[0] - todayD.getFullYear()) * 12 + (last[1] - 1) - todayD.getMonth() : 0;
+    const kind = kindOf();
     let h = `<div class="cal-head">
         <button type="button" class="cal-nav" aria-label="${c.prev}" onclick="moveCal(-1)" ${monthsFromNow <= 0 ? 'disabled' : ''}>‹</button>
         <span class="cal-title">${c.months[calM]} ${calY}</span>
         <button type="button" class="cal-nav" aria-label="${c.next}" onclick="moveCal(1)" ${monthsFromNow >= MAX_MONTHS_AHEAD ? 'disabled' : ''}>›</button>
     </div><div class="cal-grid">`;
-    c.wd.forEach((w, i) => h += `<span class="cal-wd${OPEN_DAYS.includes(i) ? ' open-wd' : ''}">${w}</span>`);
+    c.wd.forEach((w, i) => h += `<span class="cal-wd${kind && SCHED[kind].day === i ? ' open-wd' : ''}">${w}</span>`);
     for (let i = 0; i < first.getDay(); i++) h += '<span></span>';
     for (let d = 1; d <= days; d++) {
         const dt = new Date(calY, calM, d), iso = `${calY}-${pad2(calM + 1)}-${pad2(d)}`;
@@ -540,7 +548,8 @@ function renderCal() {
             : `<span class="cal-day" aria-disabled="true">${d}</span>`;
     }
     h += '</div>';
-    if (calSel) {
+    if (!kind) h += `<p class="cal-picked">${T[currentLang].pickServiceFirst}</p>`;
+    else if (calSel) {
         const [y, m, d] = calSel.split('-').map(Number), dt = new Date(y, m - 1, d);
         h += `<p class="cal-picked">${T[currentLang].days[dt.getDay()]}, ${pad2(d)}/${pad2(m)}/${y}</p>`;
     }
@@ -550,15 +559,20 @@ function moveCal(n) { calM += n; if (calM < 0) { calM = 11; calY--; } if (calM >
 function fillTimes() {
     const sel = document.getElementById('bk-time'), prev = sel.value;
     if (!calSel) { sel.disabled = true; sel.innerHTML = `<option value="">${T[currentLang].pickDateFirst}</option>`; return; }
-    const [y, m, d] = calSel.split('-').map(Number), [a, b] = HOURS[new Date(y, m - 1, d).getDay()];
-    const toMin = t => +t.split(':')[0] * 60 + +t.split(':')[1];
+    const times = SCHED[kindOf()].times;
     let h = `<option value="">${T[currentLang].selectTime}</option>`;
-    for (let t = toMin(a); t <= toMin(b); t += 30) {
-        const v = `${pad2(Math.floor(t / 60))}:${pad2(t % 60)}`;
-        h += `<option value="${v}"${v === prev ? ' selected' : ''}>${v}</option>`;
-    }
+    times.forEach(v => h += `<option value="${v}"${v === prev ? ' selected' : ''}>${v}</option>`);
     sel.innerHTML = h; sel.disabled = false;
+    if (times.length === 1) sel.value = times[0]; // horário único: já selecionado
 }
+function onServiceChange() {
+    ALLOWED = allowedFor(kindOf());
+    if (!ALLOWED.includes(calSel)) { calSel = null; document.getElementById('bk-date').value = ''; }
+    calY = todayD.getFullYear(); calM = todayD.getMonth();
+    document.getElementById('bk-error').textContent = '';
+    renderCal(); fillTimes();
+}
+document.getElementById('bk-service').addEventListener('change', onServiceChange);
 function pickDay(iso) { calSel = iso; document.getElementById('bk-date').value = iso; document.getElementById('bk-error').textContent = ''; renderCal(); fillTimes(); }
 renderCal();
 function sendBooking(e) {
