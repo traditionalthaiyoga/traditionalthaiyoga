@@ -385,7 +385,7 @@
                     <option value="" data-pt="Escolha a data primeiro" data-en="Choose a date first">Escolha a data primeiro</option>
                 </select>
         </div>
-        <p class="field-hint" style="margin:-10px 0 22px" data-pt="Massagens: sábado, às 10:00 ou às 16:00 · Shivam Yoga Sadhana: sexta, às 19:00." data-en="Massages: Saturday, 10 am or 4 pm · Shivam Yoga Sadhana: Friday, 7 pm.">Massagens: sábado, às 10:00 ou às 16:00 · Shivam Yoga Sadhana: sexta, às 19:00.</p>
+        <p class="field-hint" style="margin:-10px 0 22px" data-pt="Massagens: sexta e sábado, às 16:00 ou às 17:00 · Shivam Yoga Sadhana: sexta, às 19:00." data-en="Massages: Friday and Saturday, 4 pm or 5 pm · Shivam Yoga Sadhana: Friday, 7 pm.">Massagens: sexta e sábado, às 16:00 ou às 17:00 · Shivam Yoga Sadhana: sexta, às 19:00.</p>
         <div class="field">
             <label for="bk-name" data-pt="Seu nome" data-en="Your name">Seu nome</label>
             <input type="text" id="bk-name" autocomplete="name" data-ph-pt="Como podemos te chamar?" data-ph-en="What should we call you?" placeholder="Como podemos te chamar?">
@@ -418,7 +418,7 @@
     </div>
     <div class="contact-info">
         <p>📱 WhatsApp: <a href="https://wa.me/66819050677" class="wa-link" target="_blank" data-msg-pt="Olá! Gostaria de agendar uma massagem." data-msg-en="Hello! I would like to book a massage.">+66 81-905-0677</a></p>
-        <p data-pt="💆 Massagens: sábado, às 10:00 ou às 16:00" data-en="💆 Massages: Saturday, 10 am or 4 pm">💆 Massagens: sábado, às 10:00 ou às 16:00</p>
+        <p data-pt="💆 Massagens: sexta e sábado, às 16:00 ou às 17:00" data-en="💆 Massages: Friday and Saturday, 4 pm or 5 pm">💆 Massagens: sexta e sábado, às 16:00 ou às 17:00</p>
         <p data-pt="🧘 Shivam Yoga Sadhana: sexta, 19:00" data-en="🧘 Shivam Yoga Sadhana: Friday, 7 pm">🧘 Shivam Yoga Sadhana: sexta, 19:00</p>
     </div>
 </section>
@@ -478,9 +478,9 @@ const CAL = {
     en: { months: ['January','February','March','April','May','June','July','August','September','October','November','December'],
           wd: ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'], prev: 'Previous month', next: 'Next month' }
 };
-// massagem: sábado às 10:00 ou 16:00 · yoga: sexta às 19:00
-const SCHED = { massage: { day: 6, times: ['10:00', '16:00'] }, yoga: { day: 5, times: ['19:00'] } };
-const OPEN_COUNT = 2; // próximas duas datas de cada serviço
+// massagem: sexta e sábado às 16:00 ou 17:00 · yoga: sexta às 19:00
+// count = quantas datas liberar (massagem: 2 sextas + 2 sábados · yoga: 2 sextas)
+const SCHED = { massage: { days: [5, 6], times: ['16:00', '17:00'], count: 4 }, yoga: { days: [5], times: ['19:00'], count: 2 } };
 const todayD = new Date(); todayD.setHours(0, 0, 0, 0);
 const pad2 = x => String(x).padStart(2, '0');
 const isoOf = dt => `${dt.getFullYear()}-${pad2(dt.getMonth() + 1)}-${pad2(dt.getDate())}`;
@@ -488,7 +488,7 @@ const kindOf = () => { const v = document.getElementById('bk-service').value; re
 function allowedFor(kind) {
     if (!kind) return [];
     const list = [], d = new Date(todayD);
-    while (list.length < OPEN_COUNT) { if (d.getDay() === SCHED[kind].day) list.push(isoOf(d)); d.setDate(d.getDate() + 1); }
+    while (list.length < SCHED[kind].count) { if (SCHED[kind].days.includes(d.getDay())) list.push(isoOf(d)); d.setDate(d.getDate() + 1); }
     return list;
 }
 let ALLOWED = [];
@@ -505,7 +505,7 @@ function renderCal() {
         <span class="cal-title">${c.months[calM]} ${calY}</span>
         <button type="button" class="cal-nav" aria-label="${c.next}" onclick="moveCal(1)" ${monthsFromNow >= MAX_MONTHS_AHEAD ? 'disabled' : ''}>›</button>
     </div><div class="cal-grid">`;
-    c.wd.forEach((w, i) => h += `<span class="cal-wd${kind && SCHED[kind].day === i ? ' open-wd' : ''}">${w}</span>`);
+    c.wd.forEach((w, i) => h += `<span class="cal-wd${kind && SCHED[kind].days.includes(i) ? ' open-wd' : ''}">${w}</span>`);
     for (let i = 0; i < first.getDay(); i++) h += '<span></span>';
     for (let d = 1; d <= days; d++) {
         const dt = new Date(calY, calM, d), iso = `${calY}-${pad2(calM + 1)}-${pad2(d)}`;
